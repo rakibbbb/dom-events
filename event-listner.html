@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Listner</title>
+</head>
+<body>
+    <h1>Explore Event Listner</h1>
+    <button id="first">Click-1</button>
+    <button id="second">Click-2</button>
+    <button id="third">Click-3</button>
+    <button id="fourth">Click-3</button>
+
+    <script>
+        document.getElementById('first').addEventListener('click', fuckSystem);
+        function fuckSystem(){
+            alert("I Fuck Your System.");
+        }
+
+        document.getElementById('second').addEventListener('click', function(){
+            alert("I only fuck the education system.");
+        })
+
+        var thirdBtn = document.getElementById('third');
+        thirdBtn.addEventListener('click', fuckSystem);
+
+        var fourthbtn = document.getElementById('fourth');
+        fourthbtn.addEventListener('click', bgColor);
+        function bgColor(){
+            document.body.style.backgroundColor = 'tomato';
+            document.body.style.color = 'white';
+        }
+    </script>
+</body>
+</html>

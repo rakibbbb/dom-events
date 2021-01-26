@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li class="item">Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+            <li class="item">Qui, distinctio minus atque necessitatibus illo consectetur?</li>
+            <li class="item">Dolores earum illum, consequuntur ex debitis expedita.</li>
+            <li class="item">Quisquam, mollitia aperiam aliquam nisi quos alias.</li>
+            <li class="item">Sapiente provident ipsa animi voluptatem, vel et.</li>
+        </ul>
+    </div>
+
+    <script>
+        var items =document.getElementsByClassName('item');
+        for (let i = 0; i < items.length; i++) {
+            var item = items[i];
+            item.addEventListener('click', function(event) {
+                console.log(event.target.innerText);
+                event.target.parentNode.removeChild(event.target);
+            })
+        }
+    </script>
+</body>
+</html>

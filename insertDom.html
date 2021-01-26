@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert DOM</title>
+    <style>
+        article{
+            border: teal 1px solid;
+            border-radius: 10px;
+            margin: 10px;
+            padding: 10px;
+        }
+    </style>
+</head>
+<body>
+    <main>
+        <section>
+            <h2>Insert DOM</h2>
+            <article id="first-article">
+                <h3>Article-1</h3>
+                <p class="author">Author-1</p>
+                <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur et veritatis impedit consequuntur, reiciendis minima nam inventore illo iure accusantium.</p>
+            </article>
+            <article>
+                <h3>Article-2</h3>
+                <p class="author">Author-2</p>
+                <p class="description">Voluptas aut numquam aliquid ea et aliquam at fuga, similique saepe magni, tempora, minus eius. Saepe quisquam veritatis enim quos!</p>
+            </article>
+            <article>
+                <h3>Article-3</h3>
+                <p class="author">Author-3</p>
+                <p class="description">Eum, repellat obcaecati laudantium, nam est at blanditiis, maxime dolorem doloribus veritatis voluptate iure alias explicabo saepe expedita vel adipisci?</p>
+            </article>
+            <article>
+                <h3>Grocery List</h3>
+                <ul id="gift-list">
+                    <li>gift item -1</li>
+                    <li>gift item -2</li>
+                    <li>gift item -3</li>
+                    <li>gift item -4</li>
+                    <li>gift item -5</li>
+                </ul>
+            </article>
+        </section>
+    </main>
+    <script>
+        const article = document.getElementById('first-article');
+        const newParagraph = document.createElement('p');
+        newParagraph.innerHTML = "This is added by JavaScript."
+        article.appendChild(newParagraph);
+        newParagraph.style.backgroundColor = 'yellow';
+
+        //add one more gift item
+        const ul = document.getElementById('gift-list');
+        const newLi = document.createElement('li');
+        newLi.innerHTML = "brand new gift item";
+        ul.appendChild(newLi);
+    </script>
+</body>
+</html>

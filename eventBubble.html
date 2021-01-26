@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event Bubble More</title>
+</head>
+<body>
+    <div id="container">
+        <h1>My List</h1>
+        <ul id="myList">
+            <li class="item">Lorem ipsum dolor sit, amet consectetur adipisicing.</li>
+            <li class="item">Qui, distinctio minus atque necessitatibus illo consectetur?</li>
+            <li class="item">Dolores earum illum, consequuntur ex debitis expedita.</li>
+            <li class="item">Quisquam, mollitia aperiam aliquam nisi quos alias.</li>
+            <li class="item">Sapiente provident ipsa animi voluptatem, vel et.</li>
+        </ul>
+        <button id="addNew">Add Item</button>
+    </div>
+
+    <script>
+        // Add items inside the Ul
+        document.getElementById('addNew').addEventListener('click', function (event) {
+            var itemParent = document.getElementById('myList');
+            var newItem = document.createElement('li');
+            newItem.innerText = "Brand New Item - $";
+            itemParent.appendChild(newItem);
+        })
+
+        // Remove Items inside the UL 
+        document.getElementById('myList').addEventListener('click', function(event) {
+            event.target.parentNode.removeChild(event.target);
+        })
+
+    </script>
+</body>
+</html>
